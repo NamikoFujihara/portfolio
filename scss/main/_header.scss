@@ -1,0 +1,65 @@
+.header {
+  font-family: 'Enfont';
+  color: $white;
+  font-weight: bold;
+  line-height: 4;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  @media (max-width:767px) {
+    line-height: 2;
+  }
+ 
+
+  &-logo {
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+
+    .txts {
+      color: $white;
+      transition: .2s;
+
+
+      &:hover {
+        color: $green;
+        transition: .2s;
+      }
+
+      @media (max-width:767px) {
+        font-size: .8rem;
+        line-height: 1;
+        padding-top: 1rem;
+      }
+    }
+
+  }
+
+  &-gnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width:767px) {
+      display: none;
+    }
+  }
+
+  &-menu {
+    padding: 0 2rem;  
+
+    a {
+     color: $white;
+     transition: .2s;
+
+     &:hover {
+       color: $green;
+     }
+    }
+  }
+
+}

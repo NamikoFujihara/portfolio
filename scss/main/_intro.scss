@@ -1,0 +1,70 @@
+.intro {
+  margin-top: 20rem;
+  padding: 5rem 0;
+  // background: $back;
+
+  @media (max-width:767px) {
+    margin-top: 5rem;
+  }
+
+  &-inner {
+    width: $pc-width;
+    margin: 0 auto;
+    text-align: left;
+
+    @media (max-width:767px) {
+      width: $sp-width;
+    }
+  }
+
+  .sec-title {
+    text-align: left;
+
+    &::after {
+      content: 'About me';
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: $green;
+      -webkit-text-fill-color: transparent;
+      position: absolute;
+      bottom: 20px;
+      left: 15px;
+      z-index: -1;
+    }
+  }
+
+  &-list {
+   width: 100%;
+   border-collapse: separate;
+   border-spacing: 20px 0;
+   font-size: 1.2rem;
+  }
+
+  &-item {
+    line-height: 4;
+    // margin: 3rem 0;
+
+    @media (max-width:767px) {
+      display: block;
+      line-height: 2;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &-date {
+    color: $green;
+    // border-top: $green 1px solid;
+    // margin-right: 30px;
+    text-align: center;
+    font-family: $font-en;
+    
+  }
+
+  &-txt {
+    // border-top: $rightblack 1px solid;
+    // margin-left: 20px;
+    // padding-left: 1rem;
+  }
+
+}
+
+

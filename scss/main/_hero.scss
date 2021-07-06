@@ -1,0 +1,146 @@
+.hero {
+  position: relative;
+
+  &-inner {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    @media (max-width:767px) {
+      height: 35vh;
+    }
+  }
+  
+  &-bg {
+    position: relative;
+    height: 100%;
+    background: #000;
+    overflow: hidden;
+
+     &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .3);
+      background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+     }
+
+     iframe {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100vw;
+        height: 60vw;
+      }
+  }
+
+  &-txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+   p {
+     color: $white;
+     font-size: 60px;
+   }
+  }
+
+  &-btm {
+    position: relative;
+    width: $pc-width;
+    margin: 0 auto;
+
+    @media (max-width:767px) {
+      width: $sp-width;
+    }
+  }
+
+  &-title {
+    font-size: 10rem;
+    color: $green;
+    position: absolute;
+    top: -11rem;
+    line-height: 1.2;
+    font-family: 'Enfont';
+
+    @media (max-width:767px) {
+      font-size: 3.6rem;
+      top: -4rem;
+    }
+
+  }
+
+  .scrolldown{
+    position:absolute;
+    bottom: 5%;
+    right: 5%;
+
+    @media (max-width:767px) {
+      bottom: -65px;
+      right: 20px;
+    }
+
+    & span{
+      position: absolute;
+      left: -40px;
+      bottom: 10px;
+      color: $white;
+      font-size: 1.4rem;
+      font-family: $font-en;
+      letter-spacing: 0.05em;
+      -ms-writing-mode: tb-rl;
+      -webkit-writing-mode: vertical-rl;
+      writing-mode: vertical-rl;
+
+      @media (max-width:767px) {
+        color: $rightblack;
+        font-size: .8rem;
+        left: -22px;
+
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: -7px;
+      width: 3px;
+      height: 20px;
+      background: $white;
+      transform: skewX(-31deg);
+
+      @media (max-width:767px) {
+        background: $rightblack;
+        width: 2px;
+        height: 15px;
+        right: -5px;
+
+      }
+    }
+
+    &:after{
+      content:"";
+      position: absolute;
+      bottom:0;
+      right:0;
+      width:3px;
+      height: 90px;
+      background: $white;
+
+      @media (max-width:767px) {
+        background: $rightblack;
+        height: 60px;
+        width: 2px;
+      }
+    }
+}
+}
+

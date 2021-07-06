@@ -1,0 +1,76 @@
+.my-value {
+  background-color: $rightblack;
+
+  &-head {
+    padding: 7rem 0;
+  }
+
+  .txtl {
+    line-height: 1.5;
+    color: $white;
+    text-align: center;
+    margin-top: 3rem;
+    
+  }
+
+  &-img {
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+
+    @media (max-width:767px) {
+      display: block;
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &-bg {
+    background-image: url(../img/img1@2x.png);
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 0;
+    position: relative;
+
+    @media (max-width:767px) {
+      padding: 2rem 0;
+    }
+
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+  }
+
+  &-inner {
+    width: $pc-width;
+    margin: 0 auto;
+
+    @media (max-width:767px) {
+      width: $sp-width;
+    }
+  }
+
+  &-txt {
+    margin: 200px 0;
+    position: relative;
+
+    .txtxs {
+      margin-bottom: 44px;
+      color: $white;
+    }
+  }
+
+
+}

@@ -1,0 +1,81 @@
+.page-design {
+ 
+  &-head {
+    margin-top: 8rem;
+    margin-bottom: 6rem;
+
+    .sec-title {
+      &::after {
+        content: 'Design';
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $green;
+        -webkit-text-fill-color: transparent;
+        position: absolute;
+        bottom: 20px;
+        left: 52%;
+        transform: translate(-50%, 0);
+        z-index: -1;
+  
+        @media (max-width:767px) {
+          left: 54%;
+        }
+      }
+    }
+  }
+
+  &-inner {
+    background: $back;
+  }
+
+  &-list {
+    width: $pc-width;
+    margin: 0 auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+ 
+    @media (max-width:767px) {
+      width: $sp-width;
+    }
+  }
+
+  &-item {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+  }
+
+  &-title {
+    writing-mode: vertical-lr;
+    font-family: $font-en;
+
+    .txts {
+      color: $green;
+      letter-spacing: .6em;
+
+    }
+  }
+
+  &-img {
+    width: 40%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &-txt {
+    width: 40%;
+    background: $white;
+    padding: 3rem;
+
+    .txtm {
+      color: $green;
+      margin-bottom: 2rem;
+      font-weight: bold;
+    }
+  }
+}
